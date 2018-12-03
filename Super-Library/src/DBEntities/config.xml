@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">
+        jdbc:oracle:thin:@//superlibrary.cmywgep6pub8.us-east-2.rds.amazonaws.com:1521/ORCL
+    </property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+      <mapping class="packagename.AuthorEntity"/>
+      <mapping class="packagename.BookEntity"/>
+      <mapping class="packagename.CustomerEntity"/>
+      <mapping class="packagename.CustomerfeesEntity"/>
+      <mapping class="packagename.GenreEntity"/>
+      <mapping class="packagename.LanguageEntity"/>
+      <mapping class="packagename.LibraryEntity"/>
+      <mapping class="packagename.LoanEntity"/>
+      <mapping class="packagename.LoanitemEntity"/>
+      <mapping class="packagename.NotificationEntity"/>
+      <mapping class="packagename.PublishersEntity"/>
+      <mapping class="packagename.ReservationEntity"/>
+      <mapping class="packagename.RoomEntity"/>
+      <property name="connection.username">SuperLibrary</property>
+      <property name="connection.password">SuperLibrary</property>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
